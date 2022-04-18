@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Me!</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td><a href="./Index.html">Home</a></td>
+            <td><a href="./About BT.html">About BT</a></td>
+            <td><a href="./Contact.html">Contact The Bunny</a></td>
+        </tr>
+    </table>
+    <h1>Contact Me Here!</h1>
+    <p>Fill in the form below to contact me! <3</p>
+    <form>
+        <table class="form">
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="text" id="phone" name="phone" required pattern="[0-9]{10,13}"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email Address:</label></td>
+                <td><input type="text" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="message">Send a Message:</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea id="message" name="message" rows="5" cols="30" required></textarea></td>
+            </tr>
+        </table>
+        
+    </form>
+    <div id="my_form">
+        <br>
+        <button id="nextStep" onclick="javaScript:alert('test');">Submit</button>
+      </div>
+      
+      <div id="thank_you" style="display: none;">
+        <p>Thank you for your submission! :)</p>
+        <button type="submit">Close</button>
+      </div>
+      
+      <script>
+        var nextStep = document.querySelector('#nextStep');
+      
+        nextStep.addEventListener('click', function (e) {
+          e.preventDefault();
+          // Hide first view
+          //document.getElementById('my_form').style.display = 'none';
+      
+          // Show thank you message element
+          document.getElementById('thank_you').style.display = 'block';
+        });
+      </script>
+</body>
+</html>
+</html>
